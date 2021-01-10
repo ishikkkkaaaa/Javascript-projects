@@ -1,7 +1,7 @@
 html, body {
-    background-color: #9d9dd8;
+    background-color: #E8CEBF;
     width: 50%;
-    margin: 0 auto;
+    margin: auto;
     font-family: Lato, sans-serif;
 }
 
@@ -9,33 +9,49 @@ html, body {
     width: 360px;
 }
 
+.back{
+    background-color: rgb(202, 185, 185);
+    width: 360px;
+    padding:10%;
+    border-radius: 5%;
+    height: auto;
+    margin: 20%;
+}
+
 #inputField {
-    width: 300px;
+    width: 295px;
     height: 46px;
     border-width: 0;
-    border: 1px solid black;
-    outline: none;
+    border: 2px solid #4F4846;
     font-size: 25px;
     vertical-align: middle;
 }
 
 #addToDo {
-    background-color: rgb(214, 152, 71);
+    background-color: #DDAF94;
     height: 50px;
     width: 50px;
-    border: 1px solid black;
+    border: 2px solid #4F4846;
     vertical-align: middle;
-    font-size: 30px;
+    font-size: 25px;
+    border-radius: 50%;
+    margin-left: 1%;
 }
 
 .paragraph-styling {
-    margin: 0;
+    margin:2%;
     cursor: pointer;
     font-size: 30px;
-    background-color: rgba(233, 150, 175, 0.822);
+    border-radius: 5%;
+    background-color: #FDF8F5;
 
 }
 
 .to-dos {
     margin-top: 25px;
+}
+
+h1 {
+    color: #266150;
+    font-style: oblique bold;
 }
