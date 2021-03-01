@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numbers!!</title>
+    <script src="main.js"></script>
+    <style>
+        body{
+            display : flex;
+            align-items: center;
+            justify-content : center;
+            flex-direction:column;
+            height :100vh;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="headingTotal"> 0</h1>
+    <input type= "text" id="inputAmount" >
+    <input type= "text" id="inputDesc" >
+    <button id="btnAddExpense">+</button>
+
+<!--any variable that you change is let and const never changes-->
+<script>
+    //get the head element
+    const headingEx= document.querySelector("#headingTotal");
+
+    //get the reference to desc element
+    const inputDescEx = document.querySelector("#inputDesc");
+    
+    //ref to input
+    const inputElement = document.querySelector("#inputAmount");
+
+    //init value of expense at 0
+    let totalExpense = 0;
+
+    //set the heading element to total expense
+    headingEx.textContent = totalExpense;
+
+    //all expenses ARRRRRAY
+    const allExpenses = [];
+
+    // on button click, add input to total expense
+    function counterElement(){
+
+        //create an obj
+        const expenseItem = {};
+        //read value from input
+        const textAmount = inputElement.value;
+        //read the desc from inputdesc
+        const textDesc = inputDesc.value;
+        //convert it to number
+        const expense = parseInt(textAmount,10);
+        //put it in obj
+        expenseItem.desc = textDesc;
+        expenseItem.amount = expense;
+
+        allExpenses.push(expenseItem);  //all the values of arrays wont change, it will just add up cuz it outside the scope/function hehe
+        //add that value to totalExpense
+
+        console.table(allExpenses);
+        totalExpense = totalExpense + expense;
+        //set the heading element to totalExpense
+        headingEx.textContent = totalExpense;
+    }
+
+    //get the btn reference/element    
+    const element = document.querySelector("#btnAddExpense");
+    // listen to click event   . for class and # for id
+    element.addEventListener("click",counterElement,false);
+    
+
+</script>
+</body>
+</html>
+
