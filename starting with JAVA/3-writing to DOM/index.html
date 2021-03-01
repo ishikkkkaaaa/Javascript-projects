@@ -10,35 +10,39 @@
             display : flex;
             align-items: center;
             justify-content : center;
+            flex-direction:column;
             height :100vh;
         }
     </style>
 
 </head>
 <body>
+    <h1 id="headingTotal"> 0</h1>
     <input type= "text" id="inputAmount" ></input>
     <button id="btnAddExpense">+</button>
 
 <!--any variable that you change is let and const never changes-->
 <script>
+    //get the head element
+    const headingEx= document.querySelector("#headingTotal");
+
     //init value of expense at 0
     let totalExpense = 0;
+
+    //set the heading element to total expense
+    headingEx.textContent = totalExpense;
+
     // on button click, add input to total expense
     function counterElement(){
-
         //read value from input
         const inputElement = document.querySelector("#inputAmount");
         const textAmount = inputElement.value;
-        console.log({textAmount});
-
         //convert it to number
         const expense = parseInt(textAmount,10);
-        console.log({expense});
-
         //add that value to totalExpense
         totalExpense = totalExpense + expense;
-        console.log({totalExpense});
-        
+        //set the heading element to totalExpense
+        headingEx.textContent = totalExpense;
     }
 
     //get the btn reference/element    
