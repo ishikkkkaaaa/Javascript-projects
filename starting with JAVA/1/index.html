@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numbers!!</title>
+    <script src="main.js"></script>
+    <style>
+        body{
+            display : flex;
+            align-items: center;
+            justify-content : center;
+            height :100vh;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="btn">+</button>
+
+<!--SCRIPT-->
+<!--any variable that you change is let and const never changes-->
+<script>
+    // take a number which starts from zero
+    let counter = 0;
+
+    //function to increment a number
+    function counterElement(){
+       //increment w every click
+       counter+=1;
+       console.log(counter);
+    }
+    //get the btn reference/element
+    const element = document.querySelector("#btn");
+    // listen to click event   . for class and # for id
+    element.addEventListener("click",counterElement,false);
+    
+
+</script>
+</body>
+</html>
+
